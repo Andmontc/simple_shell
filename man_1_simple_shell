@@ -1,0 +1,20 @@
+.TH man 1 "17 April 2020" "Simple Shell"
+.SH NAME
+.B ShellBM - simple UNIX command interpreter
+.SH SYNOPSIS
+.B ./bmsh
+ \fb\ \fI[command]\fR [arguments ...]
+.SH DESCRIPTION
+.B ShellBM is a simple UNIX command language interpreter that reads commands and executes them.
+.B ShellBM can be invoked both interactively and non-interactively.
+.SH Overview
+A shell is a command-line interpreter that executes commands read from a terminal.\
+ShellBM is a basic implementation of a command line similar to
+.B bash
+or
+.B dash.
+.B Simple Shell
+.B Environment
+.in +2n
+Upon invocation, the ShellBM receives and copies the environment of the parent process in which it was executed.
+
