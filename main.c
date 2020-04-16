@@ -2,9 +2,9 @@
 
 /**
  * main - Shell execution.
- * @argc: number of input arguments.
- * @argv: input arguments array.
- *
+ * @ac: number of input arguments.
+ * @av: input arguments array.
+ * @env: environment variable.
  * Return: 0 on success.
  */
 
@@ -17,7 +17,7 @@ int main(int ac, char **av, char **env)
 	}
 	else
 	{
-		non_interactive(ac , av, env);
+		non_interactive(ac, av, env);
 	}
 	exit(0);
 	return (0);
