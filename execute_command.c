@@ -4,7 +4,7 @@
  * @commands: array of commands
  * @line: line pointer
  * @env: environment varibale
- * Return: true on succes , failure on fail
+ * Return: true on succes , failure on fail, bool
  */
 bool execute_command(char **commands, char *line, char **env)
 {
@@ -15,21 +15,22 @@ bool execute_command(char **commands, char *line, char **env)
 		free(line);
 		exit(EXIT_SUCCESS);
 	}
-	/*  */
+	/* E X I T   F U N C T I O N   B U I L T  I N */
 	else if ((_strcmp("exit", commands[0])) == 0)
 		exit_shell(line, commands);
-	/*  */
+	/* E N V   F U N C T I O N   B U I L T  I N */
 	else if ((_strcmp("env", commands[0])) == 0)
 	{
 		print_env();
 		ejecuto = true;
 	}
-	/* */
+	/* TRY ROUTES EXAMPLE : $/bin/ls */
 	else if (access(commands[0], X_OK) == 0)
 		execve(commands[0], commands, NULL);
 	else
 	{
-		ejecuto = concat_commands(commands, line, env);
+		/* TRY routes Example: $ ls */
+		ejecuto = exec_routes(commands, line, env);
 		if (ejecuto == false)
 			return (false);
 	}
