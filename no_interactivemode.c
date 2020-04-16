@@ -1,8 +1,10 @@
 #include "shell.h"
 /**
- * 
- * 
- * 
+ * non_interactive - Function that enters the non interactive mode of ShellBM
+ * @argc: arguments
+ * @argv: array of arguments
+ * @env: enviroment
+ * Return: sucess
  */
 int non_interactive(int argc ,char **argv, char **env)
 {
