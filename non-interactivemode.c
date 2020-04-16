@@ -14,6 +14,7 @@ int non_interactive(int argc, char **argv, char **env)
 	ssize_t numchar;
 	pid_t pid;
 	int status;
+	(void)argv;
 
 
 	if (argc > 1)
