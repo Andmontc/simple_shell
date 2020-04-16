@@ -38,7 +38,7 @@ char **get_commands(char *line)
 				return (NULL);
 			}
 			_strncpy(tokens[i], token, _strlen(token) + 1);
-			token = strtok(NULL, " ");
+			token = strtok(NULL, " \t\a\r\n");
 			i++;
 		}
 		tokens[i] = NULL;
