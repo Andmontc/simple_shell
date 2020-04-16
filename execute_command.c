@@ -1,8 +1,10 @@
 #include "shell.h"
 /**
- * execute_command - Function that executes a command
- * @commands: commands given
- * @final_paths: paths given
+ * execute_command -  Execute a command in the shell
+ * @commands: array of commands
+ * @line: line pointer
+ * @env: environment varibale
+ * Return: true on succes , failure on fail
  */
 bool execute_command(char **commands, char *line, char **env)
 {
@@ -15,9 +17,9 @@ bool execute_command(char **commands, char *line, char **env)
 	}
 	/*  */
 	else if ((_strcmp("exit", commands[0])) == 0)
-		exit_shell(line , commands);
+		exit_shell(line, commands);
 	/*  */
-	else if((_strcmp("env", commands[0])) == 0)
+	else if ((_strcmp("env", commands[0])) == 0)
 	{
 		print_env();
 		ejecuto = true;
@@ -34,22 +36,22 @@ bool execute_command(char **commands, char *line, char **env)
 	return (ejecuto);
 }
 /**
- * _free - function that free memory
- * @commands: memory to free
+ * free_arrays - function that free memory
+ * @array: memory to free
  */
-void free_commands(char **commands)
+void free_arrays(char **array)
 {
 	int i;
 
-	if (commands == NULL)
+	if (array == NULL)
 		return;
 	i = 0;
-	while (commands[i])
+	while (array[i])
 	{
-		free(commands[i]);
+		free(array[i]);
 		i++;
 	}
-	if (commands[i] == NULL)
-		free(commands[i]);
-	free(commands);
+	if (array[i] == NULL)
+		free(array[i]);
+	free(array);
 }
