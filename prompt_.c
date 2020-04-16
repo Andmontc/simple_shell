@@ -28,7 +28,7 @@ int interactive(char **env)
 			ejecuto = execute_command(commands, line, env);
 			if (ejecuto == false)
 			{
-				free(line), free_commands(commands);
+				free(line), free_arrays(commands);
 				exit(EXIT_FAILURE);
 			}
 		}
@@ -36,11 +36,11 @@ int interactive(char **env)
 		{
 			wait(&status);
 			if (commands == NULL)
-			free(line), free_commands(commands);
+			free(line), free_arrays(commands);
 			else if ((_strcmp("exit", commands[0])) == 0)
 			exit_shell(line, commands);
 			else
-				free_commands(commands), free(line);
+				free_arrays(commands), free(line);
 		}
 		size_line = 0, line = NULL;
 		write(STDOUT_FILENO, "ShellBM_$ ", 11);
@@ -76,6 +76,6 @@ void Error_fork(char *line, char **commands)
 {
 	perror("Error:");
 	free(line);
-	free_commands(commands);
+	free_arrays(commands);
 	exit(EXIT_FAILURE);
 }
