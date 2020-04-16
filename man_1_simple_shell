@@ -61,6 +61,3 @@ access(2), chdir(2), execve(2), _exit(2), exit(3), fflush(3), fork(2), free(3), 
 
 .SH AUTHOR
 Juan Sebastian Bueno and Oscar Andres Montes
-
-
-
