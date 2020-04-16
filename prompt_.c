@@ -33,7 +33,9 @@ int interactive(char **env)
 			ejecuto = execute_command(commands, line, env);
 			if (ejecuto == false)
 			{
-				printf("No encontro comando\n");
+				free(line);
+				free_commands(commands);
+				exit(EXIT_FAILURE);
 			}
 		}
 		else
