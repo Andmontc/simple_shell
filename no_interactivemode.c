@@ -1,10 +1,12 @@
 #include "shell.h"
 /**
- * 
- * 
- * 
+ * non_interactive - Non interactive mode for the shell
+ * @argc: numbers of args
+ * @argv: array of args
+ * @env: environment variable
+ * Return: 0 on succes.
  */
-int non_interactive(int argc ,char **argv, char **env)
+int non_interactive(int argc, char **argv, char **env)
 {
 	char *line = NULL;
 	char **commands = NULL;
@@ -14,19 +16,17 @@ int non_interactive(int argc ,char **argv, char **env)
 	int status;
 
 
-	if (argc > 1 )
+	if (argc > 1)
 	{
-		printf("argv[0] %s\n", argv[0]);
+		perror("Error");
 	}
 	numchar = getline(&line, &size_line, stdin);
-	
 	while (numchar != -1)
 	{
 		if (*line != '\n')
 		{
 			/**===== FUNCTIONS 🟢 =====*/
 			commands = get_commands(line); /* 🚩RETURN ARRAY WITH  SPLIT COMMANDS */
-	
 				/** 👶🏻C R E A T E   C H I L D  🚸 P R O C E S S 👶🏻==*/
 				pid = fork();
 				if (pid == 0)
@@ -39,7 +39,7 @@ int non_interactive(int argc ,char **argv, char **env)
 				else
 				{
 					wait(&status);
-					free(commands);
+					free_arrays(commands);
 				}
 					/** 👶🏻 E N D   O F   C H I L D  🚸 P R O C E S S 👶🏻==*/
 		}
