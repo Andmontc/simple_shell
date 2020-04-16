@@ -1,8 +1,8 @@
 #include "shell.h"
 /**
- * get_tokens - Function that tokenize the commands
+ * get_commands - Function that tokenize the commands
  * @line: getline line
- * Return: commands tokenized
+ * Return: double pointer commands tokenized
  */
 char **get_commands(char *line)
 {
@@ -20,6 +20,7 @@ char **get_commands(char *line)
 				words++;
 			}
 		}
+		/** NOT COMANDS ❌ */
 		if (words == 0)
 			return (NULL);
 		tokens = malloc(sizeof(char *) * (words + 1));
@@ -27,12 +28,13 @@ char **get_commands(char *line)
 			return (NULL);
 		token = strtok(line, " ");
 		i = 0;
+		/** F E E D I N G   T O K E N S ✅*/
 		while (token != NULL)
 		{
 			tokens[i] = malloc(_strlen(token) + 1);
 			if (tokens[i] == NULL)
 			{
-				free_commands(tokens);
+				free_arrays(tokens);
 				return (NULL);
 			}
 			_strncpy(tokens[i], token, _strlen(token) + 1);
