@@ -26,7 +26,7 @@ char **get_commands(char *line)
 		tokens = malloc(sizeof(char *) * (words + 1));
 		if (tokens == NULL)
 			return (NULL);
-		token = strtok(line, " ");
+		token = strtok(line, " \t\a\r\n");
 		i = 0;
 		/** F E E D I N G   T O K E N S ✅*/
 		while (token != NULL)
