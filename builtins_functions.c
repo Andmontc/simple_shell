@@ -3,19 +3,17 @@
  * exit_shell - Function that exits the shell
  * @line: getline line
  * @cmd: command given
- * @fp: final path
+ * Return: nothing
  */
 void exit_shell(char *line, char **cmd)
 {
 	free(line);
-	free_commands(cmd);
+	free_arrays(cmd);
 	exit(EXIT_SUCCESS);
 }
 /**
  * print_env - function that prints the enviroment
- * @line: getline line
- * @cmd: command given
- * @fp: final path
+ * Return: nothing
  */
 void print_env(void)
 {
