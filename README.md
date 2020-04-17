@@ -129,4 +129,23 @@ ShellBM_$ls
 a.out  shell.c  simple_shell
 ```
 
+**🏁 - man**
+To view documentation on each command, you can use man followed by the command you would like to know more about.
+
+```c++
+ShellBM_$ man rm 
+```
+
+
+**Interactive vs. Non-Interactive Mode**
+You can use the shell in both interactive and non-interactive mode. The examples above are done in interactive mode. You can tell because the shell runs continuously, awaiting and executing commands, until you explicitly exit.
+
+Non-interactive mode, however, is when you indirectly feed commands into the executable bmsh file from outside the shell. For example, we can list files by indirectly piping ls into hsh using echo:
+
+```c++
+$ echo "ls" | ./hsh
+a.out  shell.c  simple_shell	stuff.txt
+```
+
+
 
