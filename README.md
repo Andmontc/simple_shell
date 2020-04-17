@@ -1,4 +1,6 @@
-![Screen Shot 2020-04-17 at 3.33.43 PM](/Users/sebastian/Desktop/Screen Shot 2020-04-17 at 3.33.43 PM.png)
+<img src="https://github.com/Andmontc/simple_shell/blob/master/portrait.png"
+     alt="Flow chart"
+     style="float: left; margin-right: 10px;">
 
 
 
