@@ -1,7 +1,19 @@
-<img src="https://github.com/Andmontc/simple_shell/blob/master/portrait.png"
-     alt="Flow chart"
-     style="float: left; margin-right: 10px;">
 
+
+                     _   _    ___    _       ____    _____   ____    _____    ___    _   _ 
+                    | | | |  / _ \  | |     | __ )  | ____| |  _ \  |_   _|  / _ \  | \ | |
+                    | |_| | | | | | | |     |  _ \  |  _|   | |_) |   | |   | | | | |  \| |
+                    |  _  | | |_| | | |___  | |_) | | |___  |  _ <    | |   | |_| | | |\  |
+                    |_| |_|  \___/  |_____| |____/  |_____| |_| \_\   |_|    \___/  |_| \_|
+
+                               ____     ____   _   _    ___     ___    _      
+                              / ___|   / ___| | | | |  / _ \   / _ \  | |     
+                              \___ \  | |     | |_| | | | | | | | | | | |     
+                               ___) | | |___  |  _  | | |_| | | |_| | | |___  
+                              |____/   \____| |_| |_|  \___/   \___/  |_____| 
+                              
+                              
+    
 
 
 **Description** 📋
@@ -30,6 +42,13 @@ gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c -o shbm
 **Functions prototype** ⬇︎
 
 ```
+ ____  _   _ _____ _     _     ____  __  __      
+/ ___|| | | | ____| |   | |   | __ )|  \/  |     
+\___ \| |_| |  _| | |   | |   |  _ \| |\/| |     
+ ___) |  _  | |___| |___| |___| |_) | |  | |     
+|____/|_| |_|_____|_____|_____|____/|_|  |_|____ 
+                                          |_____|
+
 /*📖 I N T E R A C T I V E  A N D  N O  I N T E R A C T I V E */
 
 int interactive(char **env);
@@ -89,6 +108,7 @@ char *_strncpy(char *dest, char *src, int n);
 ShellBM should now be ready to use. To start the shell in interactive mode, please use the following command:
 
 ```cassandra
+
 ./shbm
 ```
 
@@ -105,6 +125,13 @@ Below are some examples of things you can try.
 ➕ Command:  ls -l
 
 ```CQL
+ ____  _   _ _____ _     _     ____  __  __      
+/ ___|| | | | ____| |   | |   | __ )|  \/  |     
+\___ \| |_| |  _| | |   | |   |  _ \| |\/| |     
+ ___) |  _  | |___| |___| |___| |_) | |  | |     
+|____/|_| |_|_____|_____|_____|____/|_|  |_|____ 
+                                          |_____|
+
 ShellBM_$ ls -l
 total 68
 -rw-rw-r-- 1 vagrant vagrant  218 Apr 16 23:29 AUTHORS
@@ -130,6 +157,13 @@ total 68
 ➕ Command:  echo anything
 
 ```
+ ____  _   _ _____ _     _     ____  __  __      
+/ ___|| | | | ____| |   | |   | __ )|  \/  |     
+\___ \| |_| |  _| | |   | |   |  _ \| |\/| |     
+ ___) |  _  | |___| |___| |___| |_) | |  | |     
+|____/|_| |_|_____|_____|_____|____/|_|  |_|____ 
+                                          |_____|
+
 ShellBM_$ echo anything
 anything
 ```
@@ -141,6 +175,13 @@ anything
 ➕ Command:  touch file.txt
 
 ```c++
+ ____  _   _ _____ _     _     ____  __  __      
+/ ___|| | | | ____| |   | |   | __ )|  \/  |     
+\___ \| |_| |  _| | |   | |   |  _ \| |\/| |     
+ ___) |  _  | |___| |___| |___| |_) | |  | |     
+|____/|_| |_|_____|_____|_____|____/|_|  |_|____ 
+                                          |_____|
+
 ShellBM_$ touch file.txt
 ShellBM_$ ls
 a.out  file.txt  shell.c  simple_shell	
@@ -154,6 +195,13 @@ a.out  file.txt  shell.c  simple_shell
 ➕ Command: rm file.txt
 
 ```c++
+ ____  _   _ _____ _     _     ____  __  __      
+/ ___|| | | | ____| |   | |   | __ )|  \/  |     
+\___ \| |_| |  _| | |   | |   |  _ \| |\/| |     
+ ___) |  _  | |___| |___| |___| |_) | |  | |     
+|____/|_| |_|_____|_____|_____|____/|_|  |_|____ 
+                                          |_____|
+
 ShellBM_$ rm file.txt
 ShellBM_$ls
 a.out  shell.c  simple_shell
@@ -165,6 +213,13 @@ a.out  shell.c  simple_shell
 To view documentation on each command, you can use man followed by the command you would like to know more about.
 
 ```c++
+ ____  _   _ _____ _     _     ____  __  __      
+/ ___|| | | | ____| |   | |   | __ )|  \/  |     
+\___ \| |_| |  _| | |   | |   |  _ \| |\/| |     
+ ___) |  _  | |___| |___| |___| |_) | |  | |     
+|____/|_| |_|_____|_____|_____|____/|_|  |_|____ 
+                                          |_____|
+
 ShellBM_$ man rm 
 ```
 
@@ -176,6 +231,13 @@ You can use the shell in both interactive and non-interactive mode. The examples
 Non-interactive mode, however, is when you indirectly feed commands into the executable bmsh file from outside the shell. For example, we can list files by indirectly piping ls into hsh using echo:
 
 ```c++
+ ____  _   _ _____ _     _     ____  __  __      
+/ ___|| | | | ____| |   | |   | __ )|  \/  |     
+\___ \| |_| |  _| | |   | |   |  _ \| |\/| |     
+ ___) |  _  | |___| |___| |___| |_) | |  | |     
+|____/|_| |_|_____|_____|_____|____/|_|  |_|____ 
+                                          |_____|
+
 $ echo "ls" | ./hsh
 a.out  shell.c  simple_shell	stuff.txt
 ```
@@ -188,6 +250,17 @@ a.out  shell.c  simple_shell	stuff.txt
 | **Operating System:** | **Ubuntu 14.04 LTS** |
 | **Compiler version:** | **gcc 4.8.4**        |
 | **Style guidelines:** | **Betty**            |
+
+
+
+```c++
+ _____   _   _      _      _   _   _  __   __   __   ___    _   _  
+|_   _| | | | |    / \    | \ | | | |/ /   \ \ / /  / _ \  | | | | 
+  | |   | |_| |   / _ \   |  \| | | ' /     \ V /  | | | | | | | | 
+  | |   |  _  |  / ___ \  | |\  | | . \      | |   | |_| | | |_| | 
+  |_|   |_| |_| /_/   \_\ |_| \_| |_|\_\     |_|    \___/   \___/  
+                                                                  
+```
 
 
 
