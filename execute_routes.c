@@ -18,7 +18,7 @@ bool exec_routes(char **commands, char *line, char **env)
 	while (directories[i] != NULL)
 	{
 		if (access(directories[i], X_OK) == 0)
-			execve(directories[i], commands, NULL);
+			execve(directories[i], commands, env);
 		i++;
 	}
 	/* NOT FOUND COMMAND */

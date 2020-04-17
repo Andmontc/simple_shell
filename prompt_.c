@@ -14,7 +14,6 @@ int interactive(char **env)
 	bool ejecuto = false;
 	/* ========== S H E L L B M _ $ ==========*/
 	signal(SIGINT, sighandle);
-	write(STDOUT_FILENO, "ShellBM_$ ", 11);
 	while ((numchar = getline(&line, &size_line, stdin)))
 	{
 		if (numchar == EOF)/*=== CHECK END OF FILE ====*/
@@ -28,8 +27,8 @@ int interactive(char **env)
 			ejecuto = execute_command(commands, line, env);
 			if (ejecuto == false)
 			{
-				free(line), free_arrays(commands);
-				exit(EXIT_FAILURE);
+				perror("no encontro comando");
+				free(line), free_arrays(commands), exit(EXIT_FAILURE);
 			}
 		}
 		else
@@ -43,7 +42,8 @@ int interactive(char **env)
 				free_arrays(commands), free(line);
 		}
 		size_line = 0, line = NULL;
-		write(STDOUT_FILENO, "ShellBM_$ ", 11);
+		if (isatty(STDIN_FILENO) == 1)
+			write(STDOUT_FILENO, "ShellBM_$ ", 11);
 	} /* === END OF WHILE === 🟥*/
 	return (0);
 }

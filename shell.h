@@ -20,7 +20,6 @@ extern char **environ;
 
 /*📖 I N T E R A C T I V E  A N D  N O I N T E R A C T I V E */
 int interactive(char **env);
-int non_interactive(int argc, char **argv, char **env);
 /** M A I N 🟥 F U N C T I O N S */
 bool exec_routes(char **commands, char *line, char **env);
 char **get_routes(char **commands, char **env);

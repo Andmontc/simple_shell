@@ -10,15 +10,18 @@
 
 int main(int ac, char **av, char **env)
 {
-
+	(void) ac;
+	(void) av;
 	if (isatty(STDIN_FILENO) == 1)
-	{
+	{	
+		write(STDOUT_FILENO, "ShellBM_$ ", 11);
 		interactive(env);
 	}
 	else
 	{
-		non_interactive(ac, av, env);
+		interactive(env);
 	}
+	
 	exit(0);
 	return (0);
 }
