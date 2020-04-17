@@ -1,3 +1,7 @@
+![Screen Shot 2020-04-17 at 3.33.43 PM](/Users/sebastian/Desktop/Screen Shot 2020-04-17 at 3.33.43 PM.png)
+
+
+
 **Description** 📋
 
 Welcome to our SHELLBM_ project ! This project is about making our own (CLI) Command Line Interpreter using  C programming languaje , it was faced in a critical and challenge way.
@@ -77,25 +81,24 @@ char *_strncpy(char *dest, char *src, int n);
 
 
 
-
 ## Testing cases. ⚙️
 
-3. Use 
-   ShellBM should now be ready to use. To start the shell in interactive mode, please use the following command:
+##  
+ShellBM should now be ready to use. To start the shell in interactive mode, please use the following command:
 
-   ```cassandra
-   ./shbm
-   ```
+```cassandra
+./shbm
+```
 
 
-   You should now see a ShellBM_$, in wait mode , waiting for the user to input a command.
+You should now see a ShellBM_$, in wait mode , waiting for the user to input a command.
 
-   Executing Commands
-   The ShellBM can execute many commands.
+Executing Commands
+The ShellBM can execute many commands.
 
 Below are some examples of things you can try.
 
- 🏁 - ls lists the contents of your current directory. The -l flag specifies the listing should be in long format.
+ 🏁 **- ls lists the contents of your current directory. The -l flag specifies the listing should be in long format.**
 
 ➕ Command:  ls -l
 
@@ -120,7 +123,7 @@ total 68
 
 
 
- 🏁 - echo displays a line of text. It takes a string of characters to be displayed as an argument.
+ 🏁**- echo displays a line of text. It takes a string of characters to be displayed as an argument.**
 
 ➕ Command:  echo anything
 
@@ -129,7 +132,9 @@ ShellBM_$ echo anything
 anything
 ```
 
-🏁 - touch creates a new file in the current directory. It takes a file name, such as file.txt as an argument.
+
+
+🏁 - **touch creates a new file in the current directory. It takes a file name, such as file.txt as an argument.**
 
 ➕ Command:  touch file.txt
 
@@ -142,7 +147,7 @@ a.out  file.txt  shell.c  simple_shell
 
 
 
- 🏁 - rm deletes a file. It takes a file name, such as file.txt as an argument.
+ 🏁 **- rm deletes a file. It takes a file name, such as file.txt as an argument.**
 
 ➕ Command: rm file.txt
 
@@ -152,12 +157,15 @@ ShellBM_$ls
 a.out  shell.c  simple_shell
 ```
 
+
+
 **🏁 - man**
 To view documentation on each command, you can use man followed by the command you would like to know more about.
 
 ```c++
 ShellBM_$ man rm 
 ```
+
 
 
 **Interactive vs. Non-Interactive Mode**
@@ -172,3 +180,16 @@ a.out  shell.c  simple_shell	stuff.txt
 
 
 
+
+
+
+
+👨🏻‍💻 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+**Developed by**:
+
+**Oscar Andres Montes** - *GitHub user* ➞ 🖥 [Andmontc](https://github.com/Andmontc)
+
+**Juan Sebastian Bueno** - *GitHub user* ➞ 🖥 [sebastianbm9507](https://github.com/sebastianbm9507)
+
+**April/14/2020**
