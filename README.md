@@ -178,8 +178,14 @@ $ echo "ls" | ./hsh
 a.out  shell.c  simple_shell	stuff.txt
 ```
 
+🛠 **Used tools**
 
 
+| Language:             | C                    |
+| --------------------- | -------------------- |
+| **Operating System:** | **Ubuntu 14.04 LTS** |
+| **Compiler version:** | **gcc 4.8.4**        |
+| **Style guidelines:** | **Betty**            |
 
 
 
