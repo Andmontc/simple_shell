@@ -106,3 +106,27 @@ ShellBM_$ echo anything
 anything
 ```
 
+🏁 - touch creates a new file in the current directory. It takes a file name, such as file.txt as an argument.
+
+➕ Command:  touch file.txt
+
+```c++
+ShellBM_$ touch file.txt
+ShellBM_$ ls
+a.out  file.txt  shell.c  simple_shell	
+```
+
+
+
+
+ 🏁 - rm deletes a file. It takes a file name, such as file.txt as an argument.
+
+➕ Command: rm file.txt
+
+```c++
+ShellBM_$ rm file.txt
+ShellBM_$ls
+a.out  shell.c  simple_shell
+```
+
+
