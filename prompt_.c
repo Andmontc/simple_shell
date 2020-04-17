@@ -63,9 +63,10 @@ void sighandle(int n __attribute__((unused)))
  */
 void ctrl_d(char *line)
 {
-	write(STDOUT_FILENO, "\n", 1);
-			free(line);
-			exit(EXIT_SUCCESS);
+        if (isatty(STDIN_FILENO))
+			write(STDOUT_FILENO, "\n", 1);
+		free(line);
+		exit(EXIT_SUCCESS);
 }
 /**
  * Error_fork -  function that exits when an error in fork
