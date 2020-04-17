@@ -53,12 +53,6 @@ char *_strcpy(char *dest, char *src);
 char *_strncpy(char *dest, char *src, int n);
 ```
 
-**Output** 🛠
-
-```
-
-```
-
 
 
 ## Testing cases. ⚙️
@@ -66,7 +60,11 @@ char *_strncpy(char *dest, char *src, int n);
 3. Use 
    ShellBM should now be ready to use. To start the shell in interactive mode, please use the following command:
 
+   ```cassandra
    ./shbm
+   ```
+
+
    You should now see a ShellBM_$, in wait mode , waiting for the user to input a command.
 
    Executing Commands
@@ -74,14 +72,12 @@ char *_strncpy(char *dest, char *src, int n);
 
 Below are some examples of things you can try.
 
-▶️	ls -l
-	ls lists the contents of your current directory. The -l flag specifies the listing should be in long format.
+ 🏁 - ls lists the contents of your current directory. The -l flag specifies the listing should be in long format.
 
-Output ⬇️
+➕ Command:  ls -l
 
-`ShellBM_$ ls -l`
-
-```c
+```CQL
+ShellBM_$ ls -l
 total 68
 -rw-rw-r-- 1 vagrant vagrant  218 Apr 16 23:29 AUTHORS
 -rw-rw-r-- 1 vagrant vagrant 3335 Apr 16 23:29 README.md
@@ -97,5 +93,16 @@ total 68
 -rw-rw-r-- 1 vagrant vagrant 2042 Apr 16 23:29 man_1_simple_shell
 -rw-rw-r-- 1 vagrant vagrant 1771 Apr 17 00:21 prompt_.c
 -rw-rw-r-- 1 vagrant vagrant 1252 Apr 17 00:10 shell.h
+```
+
+
+
+ 🏁 - echo displays a line of text. It takes a string of characters to be displayed as an argument.
+
+➕ Command:  echo anything
+
+```
+ShellBM_$ echo anything
+anything
 ```
 
